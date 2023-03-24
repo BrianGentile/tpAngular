@@ -1,0 +1,37 @@
+<div *ngIf="detail">
+Le pokemon selectionné est: {{detail.name}} #{{detail.id}}    <img src={{detail.sprites.front_default}}> 
+
+<BR>
+<BR>
+
+
+
+    Abilities:
+<ul>
+
+<li *ngFor="let ability of detail.abilities"> {{ability.ability.name}} </li>
+
+</ul>
+
+<BR>
+<BR>
+
+    Types:
+<ul>
+
+<li *ngFor="let type of detail.types"> {{type.type.name}} </li>
+
+</ul>
+
+<BR>
+<BR>
+
+    Stats:
+<ul>
+
+<li *ngFor="let stat of detail.stats">{{stat.stat.name}} : {{stat.base_stat}} </li>
+
+</ul>
+
+</div>
+
